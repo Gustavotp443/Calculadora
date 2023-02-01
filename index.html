@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+ <meta name=viewport content="width=device-width, initial-scale=1"><!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="./styles/styles.css">
+  <title>Frontend Mentor | Calculator app</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;700&display=swap" rel="stylesheet">
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+
+  <main>
+  <section class="top">
+    <h2>calc</h2>
+    <div class="theme-block">
+      <p>theme</p>
+      <div class="theme-control">
+        <p> 1&emsp;2&emsp;3 </p>
+        <div class="theme-button"></div>
+      </div>
+    </div>
+    
+  </section>
+  <section class="screen">
+      <p id="txt"></p>
+  </section>
+
+
+  <section class="keys">
+    <table>
+      <tr>
+        <td><button onclick="keyDownInsert('7')">7</button></td>
+        <td><button onclick="keyDownInsert('8')">8</button></td>
+        <td><button onclick="keyDownInsert('9')">9</button></td>
+        <td class="key1" ><button onclick="del()">DEL</button></td>
+      </tr>
+      <tr>
+        <td><button onclick="keyDownInsert('4')">4</button></td>
+        <td><button onclick="keyDownInsert('5')">5</button></td>
+        <td><button onclick="keyDownInsert('6')">6</button></td>
+        <td><button onclick="keyDownInsert('+')">+</button></td>
+      </tr>
+      <tr>
+        <td><button onclick="keyDownInsert('1')">1</button></td>
+        <td><button onclick="keyDownInsert('2')">2</button></td>
+        <td><button onclick="keyDownInsert('3')">3</button></td>
+        <td><button onclick="keyDownInsert('-')">-</button></td>
+      </tr>
+      <tr>
+        <td><button onclick="keyDownInsert('.')">.</button></td>
+        <td><button onclick="keyDownInsert('0')">0</button></td>
+        <td><button onclick="keyDownInsert('/')">/</button></td>
+        <td><button onclick="keyDownInsert('*')">x</button></td>
+      </tr>
+      <tr>
+        <td class="colspan key1" colspan="2" ><button onclick="clearText()">RESET</button></td>
+        <td class="colspan key2" colspan="2"><button onclick="calculate()">=</button></td>
+      </tr>
+    </table>
+  </section>
+</main>
+
+  
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="https://github.com/Gustavotp443" target="_blank" rel="noopener noreferrer">Gustavotp443</a>.
+  </div>
+<script src="./js/main.js" type="module"></script>
+<script src="./js/calc.js"></script>
+</body>
+</html>

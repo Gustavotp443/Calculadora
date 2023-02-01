@@ -1,0 +1,52 @@
+.keys table
+    width: 100%
+    margin: 0 auto
+    text-align: center
+    border-spacing: 0 20px
+    padding: 10px
+    border-radius: 2%
+    background-color: var(--keypadBackground)
+
+.keys td
+    width: 25%
+
+.keys button
+    width: 85%
+    height: 70px
+    background-color: var(--keyBackground3)
+    border-left: none
+    border-right: none
+    border-top: none
+    border-bottom: 6px solid var(--keyShadow3)
+    color: var(--key3)
+    border-radius: 10px
+    font-size: 32px
+    font-weight: 700
+    cursor: pointer
+    &:hover
+        background-color: var(--keyShadow3)
+
+.key1 button
+    background-color: var(--keyBackground)
+    border-bottom: 6px solid var(--keyShadow)
+    color: var(--key)
+    &:hover
+        background-color: var(--keyShadow)
+.key2 button
+    background-color: var(--keyBackground2)
+    border-bottom: 6px solid var(--keyShadow2)
+    color: var(--key2)
+    &:hover
+        background-color: var(--keyShadow2)
+
+.colspan button
+    width: 90%
+
+@media screen and (max-width:600px)
+    section
+        .colspan button
+            width: 90%
+    .key2 button
+        font-size: 20px
+    .key1 button
+        font-size: 20px

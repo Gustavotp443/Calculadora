@@ -1,0 +1,204 @@
+:root {
+  --mainBackground: hsl(222,26%,31%);
+  --toggleBackground: hsl(223, 31%, 20%);
+  --keypadBackground: hsl(223, 31%, 20%);
+  --screenBackground: hsl(224, 36%, 15%);
+  --keyBackground: hsl(225, 21%, 49%);
+  --keyShadow: hsl(224, 28%, 35%);
+  --keyBackground2: hsl(6, 63%, 50%);
+  --keyShadow2: hsl(6, 70%, 34%);
+  --keyBackground3: hsl(30, 25%, 89%);
+  --keyShadow3: hsl(28, 16%, 65%);
+  --key: hsl(0, 0%, 100%);
+  --key2: hsl(0, 0%, 100%);
+  --key3: hsl(221, 14%, 31%);
+  --otherText: hsl(0, 0%, 100%);
+  --toggleTranslate: 0;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "League Spartan", sans-serif;
+}
+
+main {
+  min-height: 800px;
+  max-width: 600px;
+  margin: 100px auto 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+section {
+  width: 100%;
+  margin-top: 20px;
+}
+
+body {
+  margin: 0 4%;
+  background-color: var(--mainBackground);
+  transition: 1s;
+}
+
+@media screen and (max-width: 600px) {
+  main {
+    margin-top: 30px;
+  }
+  section {
+    width: 96%;
+    margin: 20px 2% 0 2%;
+  }
+}
+.top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--otherText);
+}
+
+.theme-block {
+  display: flex;
+  gap: 80px;
+  color: var(--otherText);
+}
+
+.theme-block > p {
+  position: relative;
+  top: 16px;
+  color: var(--otherText);
+}
+
+.theme-control .theme-button {
+  width: 120%;
+  transform: translateX(-10%);
+  font-size: 1rem;
+  height: 20px;
+  border-radius: 20px;
+  background-color: var(--toggleBackground);
+}
+.theme-control .theme-button:before {
+  position: absolute;
+  content: "";
+  height: 14px;
+  width: 14px;
+  margin-top: 3px;
+  margin-left: 4px;
+  cursor: pointer;
+  border-radius: 50%;
+  background-color: var(--keyBackground2);
+  transform: translateX(var(--toggleTranslate));
+  transition: 0.5s;
+}
+
+@media screen and (max-width: 600px) {
+  .top {
+    font-size: 1.4em;
+    margin-bottom: 20px;
+  }
+  .theme-block {
+    display: flex;
+    gap: 40px;
+  }
+  .theme-control p {
+    font-size: 0.9rem;
+    margin-bottom: 5px;
+  }
+}
+.screen p {
+  width: 100%;
+  height: 120px;
+  border-radius: 10px;
+  background-color: var(--screenBackground);
+  color: var(--otherText);
+  font-size: 46px;
+  font-weight: 700;
+  border: none;
+  text-align: right;
+  padding-right: 30px;
+  padding-top: 40px;
+}
+
+@media screen and (max-width: 600px) {
+  .screen p {
+    height: 100px;
+    padding-top: 30px;
+  }
+}
+.keys table {
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  border-spacing: 0 20px;
+  padding: 10px;
+  border-radius: 2%;
+  background-color: var(--keypadBackground);
+}
+
+.keys td {
+  width: 25%;
+}
+
+.keys button {
+  width: 85%;
+  height: 70px;
+  background-color: var(--keyBackground3);
+  border-left: none;
+  border-right: none;
+  border-top: none;
+  border-bottom: 6px solid var(--keyShadow3);
+  color: var(--key3);
+  border-radius: 10px;
+  font-size: 32px;
+  font-weight: 700;
+  cursor: pointer;
+}
+.keys button:hover {
+  background-color: var(--keyShadow3);
+}
+
+.key1 button {
+  background-color: var(--keyBackground);
+  border-bottom: 6px solid var(--keyShadow);
+  color: var(--key);
+}
+.key1 button:hover {
+  background-color: var(--keyShadow);
+}
+
+.key2 button {
+  background-color: var(--keyBackground2);
+  border-bottom: 6px solid var(--keyShadow2);
+  color: var(--key2);
+}
+.key2 button:hover {
+  background-color: var(--keyShadow2);
+}
+
+.colspan button {
+  width: 90%;
+}
+
+@media screen and (max-width: 600px) {
+  section .colspan button {
+    width: 90%;
+  }
+  .key2 button {
+    font-size: 20px;
+  }
+  .key1 button {
+    font-size: 20px;
+  }
+}
+.attribution {
+  width: 100%;
+  color: var(--otherText);
+  font-size: 16px;
+  text-align: center;
+}
+
+.attribution a {
+  text-decoration: underline;
+  color: red;
+}/*# sourceMappingURL=styles.css.map */

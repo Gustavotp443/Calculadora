@@ -1,0 +1,46 @@
+.top
+    display: flex
+    justify-content: space-between
+    align-items: center
+    color: var(--otherText)
+
+.theme-block
+    display: flex
+    gap: 80px
+    color: var(--otherText)
+
+.theme-block>p
+    position: relative
+    top: 16px
+    color: var(--otherText)
+
+.theme-control .theme-button
+    width: 120%
+    transform: translateX(-10%)
+    font-size: 1rem
+    height: 20px
+    border-radius: 20px
+    background-color: var(--toggleBackground)
+
+    &:before
+        position: absolute
+        content: ''
+        height: 14px
+        width: 14px
+        margin-top: 3px
+        margin-left: 4px
+        cursor: pointer
+        border-radius: 50%
+        background-color: var(--keyBackground2)
+        transform: translateX(var(--toggleTranslate))
+        transition: 0.5s
+@media screen and (max-width:600px)
+    .top
+        font-size: 1.4em
+        margin-bottom: 20px
+    .theme-block
+        display: flex
+        gap: 40px
+    .theme-control p
+        font-size: 0.9rem
+        margin-bottom: 5px
