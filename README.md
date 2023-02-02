@@ -28,8 +28,8 @@ Essa é uma solução para a [Calculator app challenge on Frontend Mentor](https
 
 ### Links
 
-- Solution URL: [Github Solution](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [Github Solution](https://github.com/Gustavotp443/Calculadora)
+- Site URL: [Link](https://calculadora-sigma-three.vercel.app)
 
 ## Meu processo
 
